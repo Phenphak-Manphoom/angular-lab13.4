@@ -1,0 +1,9 @@
+<h1>
+    My Task Today</h1>
+<ul>
+    <li *ngFor="let list of lists;let i =index">
+        {{list}} <button (click)="removeList(i)">Remove</button>
+    </li>
+</ul>
+<input #list [(ngModel)]="list.value">
+<button (click)="addList(list.value)">Add</button>
